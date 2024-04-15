@@ -1,0 +1,3 @@
+Artigo sobre o ViewBinding, sugerido pelo professor:
+
+https://www.alura.com.br/artigos/view-binding-android?_gl=1*gl4ns7*_ga*MjAxMDg0NjAxOS4xNzEyODYyOTQz*_ga_1EPWSW3PCS*MTcxMzIyMjg4NS45LjAuMTcxMzIyMjg4NS4wLjAuMA..*_fplc*b0xhbXZ0TmhIU3lpJTJGTXdUQUc0bEFmQnZBMzhObkYlMkZGTiUyQjZwYWVvdG5rSmZGJTJCVWZvSWR3NjhxZ2ZQblUlMkZJdkk2Q1dQY3l1MGdPS2tydGJWeWpqWENEMHRlTjd6MHE3MFhFUEFlaDJDREowc3ZydkYxOFpUQzNzSmwzWCUyRmZ3JTNEJTNE
