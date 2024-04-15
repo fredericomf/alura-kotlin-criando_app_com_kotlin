@@ -11,9 +11,11 @@ import br.com.alura.orgs.model.Produto
 
 class ListaProdutosAdapter(
     private val context: Context,
-    private val produtos: List<Produto>,
+    produtos: List<Produto>,
 ) :
     RecyclerView.Adapter<ListaProdutosAdapter.MeuViewHolder>() {
+
+    private val produtos = produtos.toMutableList()
 
     class MeuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun vincula(produto: Produto) {
@@ -39,4 +41,10 @@ class ListaProdutosAdapter(
     }
 
     override fun getItemCount(): Int = produtos.size
+
+    fun atualiza(novosProdutos: List<Produto>){
+        produtos.clear()
+        produtos.addAll(novosProdutos)
+        notifyDataSetChanged()
+    }
 }
