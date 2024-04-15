@@ -7,21 +7,26 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import br.com.alura.orgs.R
 import br.com.alura.orgs.dao.ProdutosDao
+import br.com.alura.orgs.databinding.ActivityFormularioProdutoBinding
 import br.com.alura.orgs.model.Produto
 import java.math.BigDecimal
 
-class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario_produto) {
+class FormularioProdutoActivity : AppCompatActivity() {
+
+    private val binding by lazy{
+        ActivityFormularioProdutoBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+        val botaoSalvar = binding.botaoSalvar
 
         botaoSalvar.setOnClickListener{
 
-            val nome = findViewById<EditText>(R.id.nome).text.toString()
-            val descricao = findViewById<EditText>(R.id.descricao).text.toString()
-            val valorText = findViewById<EditText>(R.id.valor).text.toString()
+            val nome = binding.nome.text.toString()
+            val descricao = binding.descricao.text.toString()
+            val valorText = binding.valor.text.toString()
 
             val valor = if(valorText.isBlank()){
                 BigDecimal.ZERO
@@ -39,6 +44,8 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
 
             finish()
         }
+
+        setContentView(binding.root)
     }
 
 }
